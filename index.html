@@ -8,53 +8,83 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Banking System - Managing Accounts</h1>
-      <div class="form-group">
-        <label for="accountHolder">Account Holder Name:</label>
-        <input type="text" id="accountHolder" placeholder="Enter Name" />
-      </div>
+    <div class="container-wrapper">
+      <div class="container">
+        <h1>Managing Bank Accounts</h1>
 
-      <div class="form-group">
-        <label for="initialBalance">Initial Balance:</label>
-        <input
-          type="number"
-          id="initialBalance"
-          placeholder="Enter initial balance"
-        />
-      </div>
+        <div class="form-group">
+          <label for="accountHolder">Account Holder Name:</label>
+          <input type="text" id="accountHolder" placeholder="Enter Name" />
+        </div>
 
-      <div class="form-group">
-        <button onclick="createAccount()">Create Account</button>
-      </div>
+        <div class="form-group">
+          <label for="initialBalance">Initial Balance:</label>
+          <input
+            type="number"
+            id="initialBalance"
+            placeholder="Enter initial balance"
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="accountNumber">Account Number:</label>
-        <input
-          type="number"
-          id="accountNumber"
-          placeholder="Enter account number"
-        />
-      </div>
+        <div class="form-group">
+          <button onclick="createAccount()">Create Account</button>
+        </div>
 
-      <div class="form-group">
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="Enter amount" />
-      </div>
+        <hr />
 
-      <div class="form-group">
-        <button onclick="deposit()">Deposit</button>
-      </div>
+        <div class="form-group">
+          <label for="accountNumber">Account Number:</label>
+          <input
+            type="number"
+            id="accountNumber"
+            placeholder="Enter account number"
+          />
+        </div>
 
-      <div class="form-group">
-        <button onclick="withdraw()">Withdraw</button>
-      </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
 
-      <div class="form-group">
-        <button onclick="checkBalance()">Check Balance</button>
-      </div>
+        <div class="form-buttons">
+          <button onclick="deposit()">Deposit</button>
+          <button onclick="withdraw()">Withdraw</button>
+          <button onclick="checkBalance()">Check Balance</button>
+        </div>
 
-      <div class="output" id="output"></div>
+        <hr />
+
+        <div class="form-group">
+          <label for="transferFrom">Transfer From Account:</label>
+          <input type="number" id="transferFrom" placeholder="From account #" />
+        </div>
+
+        <div class="form-group">
+          <label for="transferTo">Transfer To Account:</label>
+          <input type="number" id="transferTo" placeholder="To account #" />
+        </div>
+
+        <div class="form-group">
+          <label for="transferAmount">Transfer Amount:</label>
+          <input type="number" id="transferAmount" placeholder="Enter amount" />
+        </div>
+
+        <div class="form-group">
+          <button onclick="transfer()">Transfer Funds</button>
+        </div>
+
+        <hr />
+
+        <div class="form-group button-group">
+          <button onclick="viewTransactions()">View Transactions</button>
+          <button onclick="displayAccounts()">View All Accounts</button>
+          <button class="danger" onclick="clearAllAccounts()">
+            Clear All Accounts
+          </button>
+        </div>
+
+        <div class="output" id="output"></div>
+      </div>
     </div>
   </body>
 </html>
